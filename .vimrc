@@ -6,6 +6,16 @@ set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 set number
 set nu
 
+" Set size of window
+nmap + <C-v>+
+nmap - <C-v>-
+nmap < <C-v><
+nmap > <C-v>>
+
+" Run python. Use vimspector for debugger.
+imap <F5> <Esc>:w<CR>:!clear;python %<CR>
+map <F5> :w<CR>:!clear;python %<CR>
+
 " Indent {}'s
 set foldmethod=indent
 set nofoldenable
@@ -48,3 +58,8 @@ set termguicolors
 colorscheme hmh
 
 nmap <F2> :NERDTreeToggle<CR>
+
+" Non-ascii stuff
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+set termencoding=utf-6
+set encoding=utf-8
