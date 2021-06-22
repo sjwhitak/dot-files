@@ -8,7 +8,7 @@ if exists("syntax_on")
   syntax reset
 endif
 
-let colors_name = "handmade-hero"
+let colors_name = "hmh"
 
 function! s:HL(group, fg, ...)
   " Arguments: group, guifg, guibg, gui, guisp
@@ -58,9 +58,8 @@ endfunction
 
 " Colors
 
-let s:back = ['#161616', 233]
-let s:default = ['#A08563', 137]
-
+let s:back = ['#2A2A2A', 235]
+let s:default =  ["#DAB98F", 180]
 let s:margin = ["#262626", 235]
 let s:margin_hover = ["#333333", 236]
 let s:margin_active = ["#404040", 238]
@@ -71,7 +70,7 @@ let s:mark = ["#808080", 244]
 let s:comment = ["#7D7D7D", 244]
 let s:keyword = ["#CD950C", 172]
 let s:constant = ["#6B8E23", 64]
-let s:preproc = ["#DAB98F", 180]
+let s:preproc =['#A08563', 137]
 let s:special = ["#FF0000", 196]
 let s:bar = ["#CACACA", 251]
 let s:bar_active = ["#A8A8A8", 248]
@@ -121,6 +120,8 @@ hi! link Exception Statement
 hi! link Operator Normal
 " Any other keyword
 hi! link Keyword Statement
+" (Python only) in, and, or not
+hi! link Operator Statement
 
 " Variable name
 hi! link Identifier Normal
@@ -192,3 +193,4 @@ hi! link markdownH3 Statement
 
 hi! link markdownLinkText Statement
 call s:HL('markdownLinkText', s:keyword, s:back, s:underline)
+
