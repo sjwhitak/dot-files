@@ -52,10 +52,10 @@ Plug 'davidhalter/jedi-vim' " Requires Python-enabled vim
 
 call plug#end()
 
-let g:airline_theme='ubaryd'
+let g:airline_theme='deus'
 
 set termguicolors
-colorscheme hmh
+colorscheme monokai
 
 nmap <F2> :NERDTreeToggle<CR>
 
