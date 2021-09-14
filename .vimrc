@@ -36,19 +36,26 @@ if has("gui_running")
   elseif has("gui_macvim")
     set guifont=Menlo\ Regular:h14
   elseif has("gui_win32")
+    set guioptions-=T
+    set guioptions-=m
+    set guioptions-=l
+    set guioptions-=r
+    set guioptions-=L
+    map <F11> <Esc>:call libcallnr("gvimfullscreen.dll", "ToggleFullScreen", 0)<CR>
     set guifont=Consolas:h11:cANSI
   endif
 endif
-
-" Reload config
-nmap <leader>so :source $HOME\_vimrc
 
 call plug#begin('~/vimfiles/plugged')
 
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'davidhalter/jedi-vim' " Requires Python-enabled vim
+Plug 'davidhalter/jedi-vim' " Requires Python-enabled vim, please note on Windows, use Python 32-bit
+
+" Node.js
+Plug 'moll/vim-node'
+Plug 'walm/jshint.vim'
 
 call plug#end()
 
