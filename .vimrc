@@ -5,6 +5,10 @@ set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 " Hydrid numbers
 set number
 set nu
+set relativenumber
+set incsearch
+set wildmenu
+set autoindent
 
 " Fix backspace
 set backspace=indent,eol,start
