@@ -6,21 +6,6 @@ set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 set number
 set nu
 
-" Set size of window
-nmap + <C-v>+
-nmap - <C-v>-
-nmap < <C-v><
-nmap > <C-v>>
-
-" Run python. Use vimspector for debugger.
-imap <F5> <Esc>:w<CR>:!clear;python %<CR>
-map <F5> :w<CR>:!clear;python %<CR>
-
-" Indent {}'s
-set foldmethod=indent
-set nofoldenable
-set foldlevel=99
-
 " Fix backspace
 set backspace=indent,eol,start
 
@@ -52,10 +37,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'davidhalter/jedi-vim' " Requires Python-enabled vim, please note on Windows, use Python 32-bit
-
-" Node.js
-Plug 'moll/vim-node'
-Plug 'walm/jshint.vim'
 
 call plug#end()
 
