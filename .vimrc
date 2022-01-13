@@ -1,18 +1,17 @@
 syntax on
 set clipboard=unnamed
-set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
+" 4 space = tab
+set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab autoindent
 
 " Hydrid numbers
-set number
-set nu
-set relativenumber
-set incsearch
-set wildmenu
-set autoindent
+set number nu relativenumber
+" Searching
+set incsearch wildmenu
 
 " Fix backspace
 set backspace=indent,eol,start
 
+" Gvim stuff, get rid of everything useless like on Windows
 if has("gui_running")
 
   " Highlight greater than 80 char
@@ -35,17 +34,16 @@ if has("gui_running")
   endif
 endif
 
+" Plug ins
 call plug#begin('~/vimfiles/plugged')
-
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'davidhalter/jedi-vim' " Requires Python-enabled vim, please note on Windows, use Python 32-bit
-
 call plug#end()
 
+" Simple colorscheme
 let g:airline_theme='deus'
-
 set termguicolors
 colorscheme monokai
 
